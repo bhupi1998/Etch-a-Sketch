@@ -9,13 +9,13 @@
     border: solid black 1px;
     height:500px;
     width:500px;
-    gap:1px;
+    
 }
 
 .row{
     display: inline-flex;
     flex-grow: 1;
-    gap:1px;
+    
 }
 
 .column{

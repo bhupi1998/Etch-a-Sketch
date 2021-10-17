@@ -1,4 +1,5 @@
 let idIndex=0;
+let size=prompt("Enter size of grid");;
 function rowMaker(size){
     for(let i=0;i<size;i++){
         gridElement.innerHTML+=`<div id='row${i}' class='row'></div>`;
@@ -18,9 +19,18 @@ function gridMaker(size){
 }
 
 const gridElement=document.querySelector("#gridContainer");
-gridElement.addEventListener('click', function(e){
+gridElement.addEventListener("mouseover", function(e){
     e.target.style.background="blue";
-    console.log(e);
 })
-gridMaker(2);
 
+const clearBtn=document.querySelector('#clearBtn');
+clearBtn.addEventListener("click", function(e){
+    let colElement;
+    for(let i=0; i<(size*size);i++){
+        colElement=document.querySelector(`#idIndex${i}`);
+        colElement.style.background="white";
+    }
+
+})
+
+gridMaker(size);
