@@ -2,11 +2,22 @@
     box-sizing: border-box;
 }
 #gridContainer{
+    display: flex;
+    flex-direction: column;
     margin:150px auto 0 auto;
-    height:200px;
-    width:200px;
+    height:500px;
+    width:500px;
+    gap:1px;
 }
 
 .row{
     display: inline-flex;
+    flex-grow: 1;
+    gap:1px;
+}
+
+.column{
+    background-color: red;
+    flex-grow: 1;
+  
 }
